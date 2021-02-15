@@ -20,9 +20,9 @@ public class RaycastPuzzleManager : MonoBehaviour
         {
             if (hitObject.collider.tag == "Puzzle")                                                                 // Check Tag Puzzle
             {
-                if (hitObject.collider.GetComponent<PuzzleController>().isPlayerTrigger)
+                if (hitObject.collider.GetComponent<PuzzleController>().isPlayerTrigger)                            // Player have to trigger with button
                 {
-                    if (hitObject.collider.GetComponent<PuzzleController>().Button)                                 // Puzzle is Button
+                    if (hitObject.collider.GetComponent<PuzzleController>().Button)
                     {
                         if (!hitObject.collider.GetComponent<PuzzleController>().isTab)                             // isTab is false can loading
                         {
@@ -30,14 +30,14 @@ public class RaycastPuzzleManager : MonoBehaviour
                             hitObject.collider.GetComponent<PuzzleController>().timeleft = 0.1f;                    // Send 1 every 1 second
                         }
                     }
+                }
 
-                    if (hitObject.collider.GetComponent<PuzzleController>().Switch)                                 // Puzzle is Button
+                if (hitObject.collider.GetComponent<PuzzleController>().Switch)
+                {
+                    if (!hitObject.collider.GetComponent<PuzzleController>().isTab)                                 // isTab is false can loading
                     {
-                        if (!hitObject.collider.GetComponent<PuzzleController>().isTab)                             // isTab is false can loading
-                        {
-                            hitObject.collider.GetComponent<PuzzleController>().countDown += 1 * Time.deltaTime;    // Send 1 every 1 second
-                            hitObject.collider.GetComponent<PuzzleController>().timeleft = 0.1f;                    // Send 1 every 1 second
-                        }
+                        hitObject.collider.GetComponent<PuzzleController>().countDown += 1 * Time.deltaTime;        // Send 1 every 1 second
+                        hitObject.collider.GetComponent<PuzzleController>().timeleft = 0.1f;                        // Send 1 every 1 second
                     }
                 }
             }

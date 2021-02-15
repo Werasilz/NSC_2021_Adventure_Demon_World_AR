@@ -17,9 +17,14 @@ public class PuzzleManager : MonoBehaviour
         puzzleStack1 = 0;
         puzzleStack2 = 0;
         puzzleStack3 = 0;
-        button1.SetActive(false);
-        button2.SetActive(false);
-        button3.SetActive(false);
+
+        if (GameManager.instance.level == 6 || GameManager.instance.level == 7 || GameManager.instance.level == 8 || GameManager.instance.level == 9 || GameManager.instance.level == 10)
+        {
+            button1.SetActive(false);
+            button2.SetActive(false);
+            button3.SetActive(false);
+        }
+
     }
 
     void Update()
@@ -143,22 +148,22 @@ public class PuzzleManager : MonoBehaviour
             {
                 Destroy(blocker);
             }
-        }
 
-        // Check Puzzle Stack for show button
-        if (puzzleStack1 >= 2)
-        {
-            button1.SetActive(true);
-        }
+            // Check Puzzle Stack for show button
+            if (puzzleStack1 >= 2)
+            {
+                button1.SetActive(true);
+            }
 
-        if (puzzleStack2 >= 2)
-        {
-            button2.SetActive(true);
-        }
+            if (puzzleStack2 >= 2)
+            {
+                button2.SetActive(true);
+            }
 
-        if (puzzleStack3 >= 2)
-        {
-            button3.SetActive(true);
+            if (puzzleStack3 >= 2)
+            {
+                button3.SetActive(true);
+            }
         }
         #endregion
     }

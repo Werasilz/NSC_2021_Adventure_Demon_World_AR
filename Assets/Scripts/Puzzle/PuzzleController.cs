@@ -53,13 +53,31 @@ public class PuzzleController : MonoBehaviour
                 {
                     anim.SetBool("isTab", true);
                     puzzleNumber = 2;
-                    SpawnEnemy();
+
+                    if (Switch)
+                    {
+                        Destroy(gameObject);
+                        // add quest
+                    }
+                    else
+                    {
+                        SpawnEnemy();
+                    }
                 }
                 else if (puzzleNumber == 2)
                 {
                     anim.SetBool("isTab", false);
                     puzzleNumber = 1;
-                    SpawnEnemy();
+
+                    if (Switch)
+                    {
+                        Destroy(gameObject);
+                        // add quest 
+                    }
+                    else
+                    {
+                        SpawnEnemy();
+                    }
                 }
 
                 transform.GetChild(0).GetChild(0).gameObject.SetActive(false);      // Hide Loading When loading finish

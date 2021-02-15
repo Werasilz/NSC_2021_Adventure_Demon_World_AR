@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2736665623749529396}
   - component: {fileID: 5601758924757907952}
   - component: {fileID: 1502867187}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Switch
   m_TagString: Puzzle
   m_Icon: {fileID: 0}
@@ -61,7 +61,11 @@ MonoBehaviour:
   Button: 0
   Switch: 1
   countDown: 0
+  timeleft: 0
   isTab: 0
+  puzzleNumber: 0
+  isPlayerTrigger: 0
+  enemy: []
 --- !u!1 &8839849076184135464
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +78,7 @@ GameObject:
   - component: {fileID: 573620428561855260}
   - component: {fileID: 9173797956089146386}
   - component: {fileID: 2464476153339465958}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +96,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9217458821233656901}
+  - {fileID: 2710829674839040067}
   m_Father: {fileID: 2736665623749529396}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
@@ -159,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89711d2fccaac542923e71a894c984c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isThirtyDegree: 0
 --- !u!95 &2464476153339465958
 Animator:
   serializedVersion: 3
@@ -189,6 +192,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ec7288029125ded45a138d378ba36ae3, type: 3}
       propertyPath: m_Name
       value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ec7288029125ded45a138d378ba36ae3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: ec7288029125ded45a138d378ba36ae3, type: 3}
       propertyPath: m_Pivot.x
@@ -278,10 +285,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095209689089194664, guid: ec7288029125ded45a138d378ba36ae3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec7288029125ded45a138d378ba36ae3, type: 3}
---- !u!224 &9217458821233656901 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 22400000, guid: ec7288029125ded45a138d378ba36ae3, type: 3}
+--- !u!4 &2710829674839040067 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6517888214339414022, guid: ec7288029125ded45a138d378ba36ae3, type: 3}
   m_PrefabInstance: {fileID: 9217458821213554757}
   m_PrefabAsset: {fileID: 0}
