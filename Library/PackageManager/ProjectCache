@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637489886370923720
-    m_Hash: 2004527480
+      ticks: 637489971731691398
+    m_Hash: 31926963
   m_LockFileStatus:
     m_FilePath: C:/Projects Files/Unity Projects/NSC_2021_Adventure_Demon_World_AR/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637489928680467775
-    m_Hash: 3294642642
+      ticks: 637489971751394547
+    m_Hash: 1865947601
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -926,12 +926,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.xr.arcore@4.0.9
+    - packageId: com.unity.xr.arcore@4.0.12
       testable: 0
       isDirectDependency: 1
-      version: 4.0.9
+      version: 4.0.12
       source: 1
-      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.arcore@4.0.9
+      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.arcore@4.0.12
       assetPath: Packages/com.unity.xr.arcore
       name: com.unity.xr.arcore
       displayName: ARCore XR Plugin
@@ -1077,30 +1077,30 @@ m_PackageAssets:
         verified: 4.0.12
       dependencies:
       - name: com.unity.xr.arsubsystems
-        version: 4.0.9
+        version: 4.0.12
       - name: com.unity.xr.management
-        version: 3.2.13
+        version: 4.0.1
       - name: com.unity.modules.androidjni
         version: 1.0.0
       resolvedDependencies:
       - name: com.unity.xr.arsubsystems
-        version: 4.0.9
+        version: 4.0.12
       - name: com.unity.subsystemregistration
         version: 1.0.6
       - name: com.unity.xr.management
-        version: 3.2.13
-      - name: com.unity.xr.legacyinputhelpers
-        version: 2.1.7
-      - name: com.unity.modules.vr
+        version: 4.0.1
+      - name: com.unity.modules.subsystems
         version: 1.0.0
       - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.vr
         version: 1.0.0
       - name: com.unity.modules.physics
         version: 1.0.0
       - name: com.unity.modules.xr
         version: 1.0.0
-      - name: com.unity.modules.subsystems
-        version: 1.0.0
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.7
       - name: com.unity.modules.androidjni
         version: 1.0.0
       keywords:
@@ -1122,20 +1122,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637383894550000000
+      datePublishedTicks: 637486670260000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: git+https://github.com/Unity-Technologies/upm-xr-arcore.git
-        revision: db5c001ac22dc8ce4b8648005c27f2f1923e80b1
+        url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
+        revision: d2250746d9e0645ddb4cf008d12f833bf31603e1
         path: 
-    - packageId: com.unity.xr.arfoundation@4.0.9
+    - packageId: com.unity.xr.arfoundation@4.0.12
       testable: 0
       isDirectDependency: 1
-      version: 4.0.9
+      version: 4.0.12
       source: 1
-      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.arfoundation@4.0.9
+      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.arfoundation@4.0.12
       assetPath: Packages/com.unity.xr.arfoundation
       name: com.unity.xr.arfoundation
       displayName: AR Foundation
@@ -1284,28 +1284,28 @@ m_PackageAssets:
         verified: 4.0.12
       dependencies:
       - name: com.unity.xr.arsubsystems
-        version: 4.0.9
+        version: 4.0.12
       - name: com.unity.xr.management
-        version: 3.2.13
+        version: 4.0.1
       resolvedDependencies:
       - name: com.unity.xr.arsubsystems
-        version: 4.0.9
+        version: 4.0.12
       - name: com.unity.subsystemregistration
         version: 1.0.6
       - name: com.unity.xr.management
-        version: 3.2.13
-      - name: com.unity.xr.legacyinputhelpers
-        version: 2.1.7
-      - name: com.unity.modules.vr
+        version: 4.0.1
+      - name: com.unity.modules.subsystems
         version: 1.0.0
       - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.vr
         version: 1.0.0
       - name: com.unity.modules.physics
         version: 1.0.0
       - name: com.unity.modules.xr
         version: 1.0.0
-      - name: com.unity.modules.subsystems
-        version: 1.0.0
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.7
       keywords:
       - xr
       - ar
@@ -1327,13 +1327,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637383894660000000
+      datePublishedTicks: 637486671750000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.xr.arfoundation.git
-        revision: 1d9f8b6243e086c4c79d2b3968910376718aa52d
+        url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
+        revision: d2250746d9e0645ddb4cf008d12f833bf31603e1
         path: 
     - packageId: com.unity.modules.ai@1.0.0
       testable: 0
@@ -3077,12 +3077,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.xr.arsubsystems@4.0.9
+    - packageId: com.unity.xr.arsubsystems@4.0.12
       testable: 0
       isDirectDependency: 0
-      version: 4.0.9
+      version: 4.0.12
       source: 1
-      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.arsubsystems@4.0.9
+      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.arsubsystems@4.0.12
       assetPath: Packages/com.unity.xr.arsubsystems
       name: com.unity.xr.arsubsystems
       displayName: AR Subsystems
@@ -3098,12 +3098,75 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 2.0.2
+        - 2.1.0-preview.1
+        - 2.1.0-preview.2
+        - 2.1.0
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3
+        - 2.1.14
+        - 2.1.16
+        - 2.2.0-preview.2
+        - 2.2.0-preview.3
+        - 2.2.0-preview.6
+        - 3.0.0-preview.1
+        - 3.0.0-preview.2
+        - 3.0.0-preview.3
+        - 3.0.0-preview.4
+        - 3.0.0
+        - 3.0.2
+        - 3.1.0-preview.1
+        - 3.1.0-preview.2
+        - 3.1.0-preview.4
+        - 3.1.0-preview.6
+        - 3.1.0-preview.7
+        - 3.1.0-preview.8
+        - 3.1.3
+        - 3.1.5
+        - 3.1.6
+        - 3.1.10
+        - 4.0.0-preview.1
+        - 4.0.0-preview.3
+        - 4.0.1
         - 4.0.8
         - 4.0.9
+        - 4.0.10
+        - 4.0.12
+        - 4.1.0-preview.1
+        - 4.1.0-preview.2
+        - 4.1.0-preview.3
+        - 4.1.0-preview.5
+        - 4.1.0-preview.6
+        - 4.1.0-preview.7
+        - 4.1.0-preview.9
+        - 4.1.0-preview.10
+        - 4.1.0-preview.11
+        - 4.1.0-preview.12
+        - 4.1.0-preview.13
+        - 4.1.1
+        - 4.1.3
+        - 4.1.5
         compatible:
         - 4.0.8
         - 4.0.9
-        verified: 4.0.9
+        - 4.0.10
+        - 4.0.12
+        - 4.1.0-preview.1
+        - 4.1.0-preview.2
+        - 4.1.0-preview.3
+        - 4.1.0-preview.5
+        - 4.1.0-preview.6
+        - 4.1.0-preview.7
+        - 4.1.0-preview.9
+        - 4.1.0-preview.10
+        - 4.1.0-preview.11
+        - 4.1.0-preview.12
+        - 4.1.0-preview.13
+        - 4.1.1
+        - 4.1.3
+        - 4.1.5
+        verified: 4.0.12
       dependencies:
       - name: com.unity.subsystemregistration
         version: 1.0.6
@@ -3126,20 +3189,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637486668120000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.xr.arsubsystems.git
-        revision: 4a69d2a6b23f9f74ec4841c5ad543f9578493c0d
+        url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
+        revision: d2250746d9e0645ddb4cf008d12f833bf31603e1
         path: 
-    - packageId: com.unity.xr.management@3.2.13
+    - packageId: com.unity.xr.management@4.0.1
       testable: 0
       isDirectDependency: 0
-      version: 3.2.13
+      version: 4.0.1
       source: 1
-      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.management@3.2.13
+      resolvedPath: C:\Projects Files\Unity Projects\NSC_2021_Adventure_Demon_World_AR\Library\PackageCache\com.unity.xr.management@4.0.1
       assetPath: Packages/com.unity.xr.management
       name: com.unity.xr.management
       displayName: XR Plugin Management
@@ -3149,8 +3212,8 @@ m_PackageAssets:
         url: 
       category: 
       type: 
-      description: Package to provide for simple management of XR plug-ins. Provides
-        help and management for loading, initialization, settings, and build support
+      description: Package that provides simple management of XR plug-ins. Manages
+        and offers help with loading, initialization, settings, and build support
         for XR plug-ins.
       status: 4
       errors: []
@@ -3207,23 +3270,29 @@ m_PackageAssets:
         - 4.0.1
         verified: 3.2.17
       dependencies:
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
       - name: com.unity.xr.legacyinputhelpers
-        version: 2.1.2
+        version: 2.1.7
       - name: com.unity.subsystemregistration
         version: 1.0.6
       resolvedDependencies:
-      - name: com.unity.xr.legacyinputhelpers
-        version: 2.1.7
-      - name: com.unity.modules.vr
+      - name: com.unity.modules.subsystems
         version: 1.0.0
       - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.vr
         version: 1.0.0
       - name: com.unity.modules.physics
         version: 1.0.0
       - name: com.unity.modules.xr
         version: 1.0.0
-      - name: com.unity.modules.subsystems
-        version: 1.0.0
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.7
       - name: com.unity.subsystemregistration
         version: 1.0.6
       keywords:
@@ -3246,13 +3315,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637293838190000000
+      datePublishedTicks: 637486666900000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/xr.sdk.management.git
-        revision: 3a3e4cb8f3b8a580f8bbf417ef9726adf94b1b97
+        revision: 7be7864c531ec05f0ba18503a2bb44684061e071
         path: 
     - packageId: com.unity.ext.nunit@1.0.6
       testable: 0
@@ -3340,6 +3409,27 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.0
+        - 1.0.2
+        - 1.0.3
+        - 1.3.1
+        - 1.3.2
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.11
+        - 2.0.1
+        - 2.0.2
+        - 2.0.4
+        - 2.0.6
+        - 2.0.8
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3
+        - 2.1.4
+        - 2.1.6
         - 2.1.7
         compatible:
         - 2.1.7
@@ -3378,7 +3468,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637434003470000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -3407,6 +3497,9 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.0-preview.4
+        - 1.0.4
+        - 1.0.5
         - 1.0.6
         - 1.1.0
         compatible:
@@ -3431,7 +3524,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637056434700000000
       documentationUrl: 
       hasRepository: 1
       repository:
