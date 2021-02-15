@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GamePlay
+  - Enemy
+  - EnemyArea
+  - PlayerCollider
+  - HpPotion
+  - Boss
+  - Blocker
+  - Environment
+  - Skill1
+  - Skill2
+  - Skill3
+  - Shard
+  - ShardArea
+  - CheckPlayer
+  - BoxItem
+  - Wall
+  - PlayerArea
+  - Puzzle
+  - BossArea
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - BackGround
+  - GamePlay
+  - DamageShow
+  - Ground
+  - ColliderThrough
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3232238543
+    locked: 0
+  - name: GamePlay
+    uniqueID: 3510249175
+    locked: 0

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 54d41aac446b8c24184cf7622ed17fc5
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: e22293f0314a8c24292224352fc0e4ca
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 7a79588ed781f26439aefb03b9c0c13b
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 5fea1b5eeb3c1f54c87a006f0a9bf946
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 34b8e85debf9ee74396ee814241c8b89
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 3e95378a13109ed4eadb04d39623133d
+  - enabled: 1
+    path: Assets/Scenes/Boss/Level1Boss.unity
+    guid: 744fa3c6d84205841baa6c41c9e15138
+  - enabled: 1
+    path: Assets/Scenes/Boss/Level2Boss.unity
+    guid: 78eda0c8e4820c34585fee33b8d3f124
+  - enabled: 1
+    path: Assets/Scenes/Boss/Level3Boss.unity
+    guid: ef2d20139bdb0de488090b07a035141a
+  - enabled: 1
+    path: Assets/Scenes/Boss/Level4Boss.unity
+    guid: aa41325e7f5c21241a6a3818f6f1d169
+  - enabled: 1
+    path: Assets/Scenes/Boss/Level5Boss.unity
+    guid: 647390c0f2c452e4682ed7423ac98384
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 9357e50910d60d5409b4318d2ed56db3
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1fd31f94f82712240b39fa9398c65571, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 819c2127756ade14d8db4aa0f94dfdda, type: 2}
