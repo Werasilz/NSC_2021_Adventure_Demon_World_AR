@@ -227,8 +227,8 @@ public class PlayerController : MonoBehaviour
     {
         if (stackHit > 0 && damaged == 0)                                                               // Enemy Hit to Player
         {
-            int minDamage = 3;                                                                          // Set min Damage
-            int maxDamage = 11;                                                                         // Set max Damage
+            float minDamage = 3;                                                                        // Set min Damage
+            float maxDamage = 11 - GameManager.instance.defence;                                        // Set max Damage
             damaged = Random.Range(minDamage, maxDamage);                                               // Random Damage from min and max value
             stackHit = 0;                                                                               // Reset Hit
         }
@@ -240,8 +240,8 @@ public class PlayerController : MonoBehaviour
     {
         if (stackHitBoss > 0 && damaged == 0)                                                           // Boss Hit to Player
         {
-            int minDamage = 10 * GameManager.instance.damageDouble;                                     // Set min Damage
-            int maxDamage = 16 * GameManager.instance.damageDouble;                                     // Set max Damage
+            float minDamage = 10 * GameManager.instance.damageDouble;                                   // Set min Damage
+            float maxDamage = (16 * GameManager.instance.damageDouble) - GameManager.instance.defence;  // Set max Damage
             damaged = Random.Range(minDamage, maxDamage);                                               // Random Damage from min and max value
             stackHitBoss = 0;                                                                           // Reset Hit
         }

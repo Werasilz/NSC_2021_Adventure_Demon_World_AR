@@ -1930,7 +1930,7 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: 755cb7470c867af3c685c54506079ddc
+      Hash: 3013f9624cb8395addeb1f5cf7d89546
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterTabController
@@ -2170,7 +2170,7 @@ ScriptsOnlyBuild:
     className: SortingLayerController
   - hash:
       serializedVersion: 2
-      Hash: 52cb612ccd3303dee0991fa5db14ae5b
+      Hash: 81d360ff6c1e803b8f1ce3b35c2effc8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

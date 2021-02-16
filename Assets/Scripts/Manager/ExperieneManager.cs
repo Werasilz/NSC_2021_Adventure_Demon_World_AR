@@ -73,7 +73,7 @@ public class ExperieneManager : MonoBehaviour
             }
         }
 
-        expAmount = levelPlayer * 100;                                      // Calulate Exp Amount
+        expAmount = levelPlayer * 100;                                      // Calculate Exp Amount
 
         if (expPlayer >= expAmount)                                         // Level Up
         {
@@ -83,9 +83,9 @@ public class ExperieneManager : MonoBehaviour
             Destroy(effectClone, 1);
             expPlayer -= expAmount;                                         // Decrease Exp Player
             levelPlayer += 1;                                               // Increase Level Player
-            GameManager.instance.maxHpPlayer += 10;                         // Increase Max Hp Player
+            GameManager.instance.maxHpPlayer += 5;                          // Increase Max Hp Player
             GameManager.instance.hpPlayer = GameManager.instance.maxHpPlayer;
-            increaseDamagePercent += 0.1f;                                  // Increase Damage Percent
+            increaseDamagePercent += 0.05f;                                 // Increase Damage Percent
             expBar.sizeDelta = new Vector2(0, 50);                          // Reset Exp Bar Width
         }
 
@@ -95,7 +95,7 @@ public class ExperieneManager : MonoBehaviour
             Vector3 expBarNewSize = expBar.sizeDelta;                       // Save Exp Bar Size
 
             float expBarWidth = 1920 / levelPlayer;                         // Width of Exp Bar
-            expBarNewSize.x = expPlayer * expBarWidth / 100;                // Calulate Exp Bar New Size
+            expBarNewSize.x = expPlayer * expBarWidth / 100;                // Calculate Exp Bar New Size
             expBar.sizeDelta = expBarNewSize;                               // Set Exp Bar New Size to Exp Bar
         }
     }

@@ -10,6 +10,8 @@ public class CharacterTabController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI damageText;
+    public TextMeshProUGUI defenceText;
+    public TextMeshProUGUI criticalText;
 
     public Button shard1;
     public Button shard2;
@@ -26,6 +28,8 @@ public class CharacterTabController : MonoBehaviour
         scoreText.text = "คะแนน : " + GameManager.instance.score;
         hpText.text = "พลังชีวิต : " + GameManager.instance.maxHpPlayer;
         damageText.text = "พลังโจมตี : " + (minDamage * ExperieneManager.instance.increaseDamagePercent).ToString("0") + " - " + (maxDamage * ExperieneManager.instance.increaseDamagePercent).ToString("0");
+        defenceText.text = "พลังป้องกัน : " + (GameManager.instance.defence * 10).ToString() + " %";
+        criticalText.text = "อัตราคริติคอล : " + (100 / GameManager.instance.critical).ToString("0") + " %";
 
         if (LevelSelectManager.instance != null)
         {

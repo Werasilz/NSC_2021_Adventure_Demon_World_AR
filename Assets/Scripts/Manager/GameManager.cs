@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int score = 0;                                                               // Score by Kill Enemy
     public float hpPlayer;                                                              // Player Health
     public float maxHpPlayer = 100;                                                     // Max HP
+    public int defence = 0;
+    public int critical = 10;
     #endregion
 
     #region Text User Interface

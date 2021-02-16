@@ -387,9 +387,9 @@ public class EnemyController : MonoBehaviour
                 isCritical = false;                                                                         // Reset isCritical
                 float minDamage = 100 * ExperieneManager.instance.increaseDamagePercent;                    // Set min Damage and multiply with DamgePercent
                 float maxDamage = 116 * ExperieneManager.instance.increaseDamagePercent;                    // Set max Damage and multiply with DamgePercent
-                int Critical = Random.Range(1, 11);                                                         // Random Critical 1 - 10
+                int Critical = Random.Range(1, GameManager.instance.critical + 1);                          // Random Critical 1 - 10 (normal rate = 10)
 
-                if (Critical == 10)                                                                         // Critical when Random Number 10
+                if (Critical == GameManager.instance.critical)                                              // Critical when Random Number 10
                 {
                     isCritical = true;
                     minDamage = 120 * ExperieneManager.instance.increaseDamagePercent;                      // Set min Critical Damage and multiply with DamgePercent
@@ -536,7 +536,7 @@ public class EnemyController : MonoBehaviour
             rb.velocity = Vector3.zero;                                                                     // Reset Value for knockback bug
             rb.constraints = originConstraints;
 
-            isDown = true;                                                                                  // Set isDonw to True
+            isDown = true;                                                                                  // Set isDown to True
             enemyHpBar.SetActive(false);                                                                    // Hide HpBar when Enemy Down
             anim.SetTrigger("isDown");                                                                      // Play Animation isDown
             yield return new WaitForSeconds(2);                                                             // Wait 2 sec
