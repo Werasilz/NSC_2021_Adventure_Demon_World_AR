@@ -297,61 +297,81 @@ public class GameManager : MonoBehaviour
         {
             level = 1;
             shardAll = 4;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             level = 2;
             shardAll = 4;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             level = 3;
             shardAll = 6;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             level = 4;
             shardAll = 5;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 5)
         {
             level = 5;
             shardAll = 5;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 6)
         {
             level = 6;
             shardAll = 10;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 7)
         {
             level = 7;
             shardAll = 10;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 8)
         {
             level = 8;
             shardAll = 10;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 9)
         {
             level = 9;
             shardAll = 10;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 10)
         {
             level = 10;
             shardAll = 10;
+            shardCollect = 0;
             switchAll = 3;
+            switchCollect = 0;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 11)
         {
