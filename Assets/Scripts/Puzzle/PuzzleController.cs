@@ -18,6 +18,7 @@ public class PuzzleController : MonoBehaviour
     private int minType;
     public bool isPlayerTrigger;
     public GameObject[] enemy;
+    public GameObject smokeEffect;
 
     private void Awake()
     {
@@ -49,35 +50,28 @@ public class PuzzleController : MonoBehaviour
             {
                 isTab = true;                                                       // Set to true for cannot raycast send countDown point
 
-                if (puzzleNumber == 1)
+                if (puzzleNumber == 1)                                              // Button Up, Switch Left
                 {
                     anim.SetBool("isTab", true);
-                    puzzleNumber = 2;
+                    puzzleNumber = 2;                                               // Change Value for Button and Switch Change Sprite
 
-                    if (Switch)
+                    if (Switch)                                                     // If switch Destroy then add Quest Score
                     {
-                        Destroy(gameObject);
-                        // add quest
+                        Destroy(gameObject, 1f);
+                        GameObject smokeClone = Instantiate(smokeEffect, transform.position, transform.rotation);
+                        Destroy(smokeClone, 0.5f);
+                        GameManager.instance.switchCollect += 1;
                     }
-                    else
+                    else                                                            // Else if button spawn Enemy
                     {
                         SpawnEnemy();
                     }
                 }
-                else if (puzzleNumber == 2)
+                else if (puzzleNumber == 2)                                         // Button Down
                 {
                     anim.SetBool("isTab", false);
-                    puzzleNumber = 1;
-
-                    if (Switch)
-                    {
-                        Destroy(gameObject);
-                        // add quest 
-                    }
-                    else
-                    {
-                        SpawnEnemy();
-                    }
+                    puzzleNumber = 1;                                               // Change Value for Button Change to Up
+                    SpawnEnemy();                                                   // Spawn Enemy
                 }
 
                 transform.GetChild(0).GetChild(0).gameObject.SetActive(false);      // Hide Loading When loading finish
@@ -88,29 +82,29 @@ public class PuzzleController : MonoBehaviour
 
     void ResetIsTab()
     {
-        isTab = false;
+        isTab = false;                                                              // Reset IsTab
     }
 
     void SpawnEnemy()
     {
-        if (GameManager.instance.level == 6 || GameManager.instance.level == 7)
+        if (GameManager.instance.level == 6 || GameManager.instance.level == 7)     // Spawn Enemy Type 1 and 2
         {
             minType = 0;
             maxType = 2;
         }
-        else if (GameManager.instance.level == 8)
+        else if (GameManager.instance.level == 8)                                   // Spawn Enemy Type 2 and 3
         {
             minType = 1;
             maxType = 3;
         }
-        else if (GameManager.instance.level == 9 || GameManager.instance.level == 10)
+        else if (GameManager.instance.level == 9 || GameManager.instance.level == 10)// Spawn All Enemy
         {
             minType = 0;
             maxType = 3;
         }
 
         GameObject enemyClone = Instantiate(enemy[Random.Range(minType, maxType)], transform.position, transform.rotation);
-        enemyClone.GetComponent<EnemyController>().Awake();
+        enemyClone.GetComponent<EnemyController>().Awake();                         // For Setup Enemy
         enemyClone.GetComponent<EnemyController>().Start();
     }
 

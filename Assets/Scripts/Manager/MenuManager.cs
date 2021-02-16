@@ -270,7 +270,7 @@ public class MenuManager : MonoBehaviour
         if (GameManager.instance.level == 1 || GameManager.instance.level == 2 || GameManager.instance.level == 3 || GameManager.instance.level == 4 || GameManager.instance.level == 5)
         {
             GameManager.instance.shardCollect += 1;
-
+            GameManager.instance.switchCollect += 1;
         }
         else if (GameManager.instance.level == 6 || GameManager.instance.level == 7 || GameManager.instance.level == 8 || GameManager.instance.level == 9 || GameManager.instance.level == 10)
         {

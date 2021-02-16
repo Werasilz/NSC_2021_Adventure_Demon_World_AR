@@ -66,6 +66,7 @@ MonoBehaviour:
   puzzleNumber: 0
   isPlayerTrigger: 0
   enemy: []
+  smokeEffect: {fileID: 8505655376266497223, guid: 24757edb616b6cc4f8491778884860c2, type: 3}
 --- !u!1 &8839849076184135464
 GameObject:
   m_ObjectHideFlags: 0

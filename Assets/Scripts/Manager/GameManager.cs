@@ -19,11 +19,12 @@ public class GameManager : MonoBehaviour
     #region Text User Interface
     private TextMeshProUGUI hpText;
     private TextMeshProUGUI scoreText;
-    private TextMeshProUGUI questText;
+    private TextMeshProUGUI questText1;
+    private TextMeshProUGUI questText2;
     #endregion
 
     #region Game Value
-    public int dropRate;                                                                // Drop Item Rate Defalut = 5
+    public int dropRate;                                                                // Drop Item Rate Default = 5
     [HideInInspector] public bool isPause;                                              // Check Game Pause
     [HideInInspector] public int damageDouble = 1;                                      // For Boss Double Damage
     #endregion
@@ -31,6 +32,10 @@ public class GameManager : MonoBehaviour
     #region Quest Value
     public int shardCollect;
     public int shardAll;
+    public int switchCollect;
+    public int switchAll;
+    private bool questFinish1;
+    private bool questFinish2;
     #endregion
 
     #region GameObject
@@ -39,7 +44,8 @@ public class GameManager : MonoBehaviour
     private GameObject pauseTab;
     private GameObject gameoverTab;
     private GameObject gamePlay;
-    private GameObject questBar;
+    private GameObject questBar1;
+    private GameObject questBar2;
     private GameObject clearText;
     #endregion
 
@@ -82,9 +88,11 @@ public class GameManager : MonoBehaviour
 
         if (level == 1 || level == 2 || level == 3 || level == 4 || level == 5)         // Get Quest Text only normal level
         {
-            questBar = GameObject.Find("UserInterface").transform.GetChild(2).gameObject;
-            clearText = GameObject.Find("UserInterface").transform.GetChild(3).gameObject;
-            questText = GameObject.Find("QuestText").GetComponent<TextMeshProUGUI>();
+            questBar1 = GameObject.Find("UserInterface").transform.GetChild(2).gameObject;
+            questBar2 = GameObject.Find("UserInterface").transform.GetChild(3).gameObject;
+            clearText = GameObject.Find("UserInterface").transform.GetChild(4).gameObject;
+            questText1 = GameObject.Find("QuestText").GetComponent<TextMeshProUGUI>();
+            questText2 = GameObject.Find("QuestText2").GetComponent<TextMeshProUGUI>();
         }
     }
 
@@ -100,7 +108,8 @@ public class GameManager : MonoBehaviour
 
                 if (level == 1 || level == 2 || level == 3 || level == 4 || level == 5) // Set Text Quest only normal level
                 {
-                    questText.text = "เศษเสี้ยว : " + shardCollect + " / " + shardAll + " ชิ้น";
+                    questText1.text = "เศษเสี้ยว : " + shardCollect + " / " + shardAll + " ชิ้น";
+                    questText2.text = "ปลดล็อค : " + switchCollect + " / " + switchAll + " จุด";
                 }
             }
         }
@@ -135,10 +144,25 @@ public class GameManager : MonoBehaviour
             if (shardCollect > 0 && shardCollect >= shardAll)                           // Check Get All Shard
             {
                 shardCollect = 0;                                                       // Clear Shard
-                questBar.SetActive(false);                                              // Hide Quest Bar
+                questBar1.SetActive(false);                                             // Hide Quest Bar
+                questFinish1 = true;                                                    // CheckFinish
+            }
+
+            if (switchCollect > 0 && switchCollect >= switchAll)                        // Check Get All Switch
+            {
+                switchCollect = 0;                                                      // Clear Shard
+                questBar2.SetActive(false);                                             // Hide Quest Bar
+                questFinish2 = true;                                                    // Check Finish
+            }
+
+            if (questFinish1 && questFinish2)                                           // Check Finish All Quest
+            {
+                questFinish1 = false;                                                   // Reset Value
+                questFinish2 = false;                                                   // Reset Value
                 clearText.SetActive(true);                                              // Show Clear Text
                 Invoke("ShowCompleteTab", 5);                                           // Call Level Clear
             }
+
         }
     }
 
@@ -273,51 +297,61 @@ public class GameManager : MonoBehaviour
         {
             level = 1;
             shardAll = 4;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             level = 2;
             shardAll = 4;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             level = 3;
             shardAll = 6;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             level = 4;
             shardAll = 5;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 5)
         {
             level = 5;
             shardAll = 5;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 6)
         {
             level = 6;
             shardAll = 10;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 7)
         {
             level = 7;
             shardAll = 10;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 8)
         {
             level = 8;
             shardAll = 10;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 9)
         {
             level = 9;
             shardAll = 10;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 10)
         {
             level = 10;
             shardAll = 10;
+            switchAll = 3;
         }
         else if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 11)
         {
