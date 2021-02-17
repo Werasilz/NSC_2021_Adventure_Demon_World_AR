@@ -24,12 +24,12 @@ public class CharacterTabController : MonoBehaviour
 
     void Update()
     {
-        levelText.text = "เลเวล : " + ExperieneManager.instance.levelPlayer;
-        scoreText.text = "คะแนน : " + GameManager.instance.score;
-        hpText.text = "พลังชีวิต : " + GameManager.instance.maxHpPlayer;
-        damageText.text = "พลังโจมตี : " + (minDamage * ExperieneManager.instance.increaseDamagePercent).ToString("0") + " - " + (maxDamage * ExperieneManager.instance.increaseDamagePercent).ToString("0");
-        defenceText.text = "พลังป้องกัน : " + (GameManager.instance.defence * 10).ToString() + " %";
-        criticalText.text = "อัตราคริติคอล : " + (100 / GameManager.instance.critical).ToString("0") + " %";
+        levelText.text = "Level | เลเวล : " + ExperieneManager.instance.levelPlayer;
+        scoreText.text = "Score | คะแนน : " + GameManager.instance.score;
+        hpText.text = "HP | พลังชีวิต : " + GameManager.instance.maxHpPlayer;
+        damageText.text = "STR | พลังโจมตี : " + (minDamage * ExperieneManager.instance.increaseDamagePercent).ToString("0") + " - " + (maxDamage * ExperieneManager.instance.increaseDamagePercent).ToString("0");
+        defenceText.text = "DEF | พลังป้องกัน : " + (GameManager.instance.defence * 10).ToString() + " %";
+        criticalText.text = "CRI | อัตราคริติคอล : " + (100 / GameManager.instance.critical).ToString("0") + " %";
 
         if (LevelSelectManager.instance != null)
         {
