@@ -6,6 +6,10 @@ using TMPro;
 
 public class CharacterTabController : MonoBehaviour
 {
+    private float adminCheck = 0;
+    private int i = 0;
+    private GameObject canvasAdmin;
+
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hpText;
@@ -22,8 +26,16 @@ public class CharacterTabController : MonoBehaviour
     private int minDamage = 50;
     private int maxDamage = 85;
 
+    private void Awake()
+    {
+        canvasAdmin = GameObject.Find("CanvasAdmin");
+        canvasAdmin.SetActive(false);
+    }
+
     void Update()
     {
+        Admin();
+
         levelText.text = "Level | เลเวล : " + ExperieneManager.instance.levelPlayer;
         scoreText.text = "Score | คะแนน : " + GameManager.instance.score;
         hpText.text = "HP | พลังชีวิต : " + GameManager.instance.maxHpPlayer;
@@ -117,6 +129,89 @@ public class CharacterTabController : MonoBehaviour
         else
         {
             GameObject.Find("CharacterTab").transform.GetChild(5).gameObject.SetActive(false);
+        }
+    }
+
+    void Admin()
+    {
+        if (adminCheck >= 10)
+        {
+            adminCheck = 0;
+
+            if (!canvasAdmin.activeInHierarchy)
+            {
+                canvasAdmin.SetActive(true);
+            }
+            else
+            {
+                canvasAdmin.SetActive(false);
+            }
+        }
+    }
+
+    public void ShowAdminTab()
+    {
+        Debug.Log(adminCheck);
+        adminCheck += 1;
+    }
+
+    public void GetScore()
+    {
+        GameManager.instance.score += 1;
+    }
+
+    public void LevelClear()
+    {
+        i++;
+
+        if (i == 1)
+        {
+            LevelSelectManager.instance.level1IsClear = true;
+        }
+
+        if (i == 2)
+        {
+            LevelSelectManager.instance.level2IsClear = true;
+        }
+
+        if (i == 3)
+        {
+            LevelSelectManager.instance.level3IsClear = true;
+        }
+
+        if (i == 4)
+        {
+            LevelSelectManager.instance.level4IsClear = true;
+        }
+
+        if (i == 5)
+        {
+            LevelSelectManager.instance.level5IsClear = true;
+        }
+
+        if (i == 6)
+        {
+            LevelSelectManager.instance.level6IsClear = true;
+        }
+
+        if (i == 7)
+        {
+            LevelSelectManager.instance.level7IsClear = true;
+        }
+
+        if (i == 8)
+        {
+            LevelSelectManager.instance.level8IsClear = true;
+        }
+
+        if (i == 9)
+        {
+            LevelSelectManager.instance.level9IsClear = true;
+        }
+
+        if (i == 10)
+        {
+            LevelSelectManager.instance.level10IsClear = true;
         }
     }
 }

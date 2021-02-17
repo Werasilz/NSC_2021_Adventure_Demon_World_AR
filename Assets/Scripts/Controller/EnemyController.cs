@@ -363,15 +363,15 @@ public class EnemyController : MonoBehaviour
             if (!isBeatBySkill)                                                                             // Normal Enemy
             {
                 isCritical = false;                                                                         // Reset isCritical
-                float minDamage = 50 * ExperieneManager.instance.increaseDamagePercent;                     // Set min Damage and multiply with DamgePercent
-                float maxDamage = 66 * ExperieneManager.instance.increaseDamagePercent;                     // Set max Damage and multiply with DamgePercent
-                int Critical = Random.Range(1, 11);                                                         // Random Critical 1 - 10
+                float minDamage = 50 * ExperieneManager.instance.increaseDamagePercent;                     // Set min Damage and multiply with DamagePercent
+                float maxDamage = 66 * ExperieneManager.instance.increaseDamagePercent;                     // Set max Damage and multiply with DamagePercent
+                int Critical = Random.Range(1, GameManager.instance.critical + 1);                          // Random Critical 1 - 10 (normal rate = 10)
 
-                if (Critical == 10)                                                                         // Critical when Random Number 10
+                if (Critical == GameManager.instance.critical)                                              // Critical when Random Number 10
                 {
                     isCritical = true;
-                    minDamage = 70 * ExperieneManager.instance.increaseDamagePercent;                       // Set min Critical Damage and multiply with DamgePercent
-                    maxDamage = 86 * ExperieneManager.instance.increaseDamagePercent;                       // Set max Critical Damage and multiply with DamgePercent
+                    minDamage = 70 * ExperieneManager.instance.increaseDamagePercent;                       // Set min Critical Damage and multiply with DamagePercent
+                    maxDamage = 86 * ExperieneManager.instance.increaseDamagePercent;                       // Set max Critical Damage and multiply with DamagePercent
                 }
 
                 damaged = Random.Range(minDamage, maxDamage);                                               // Random Damage from min and max value
@@ -385,15 +385,15 @@ public class EnemyController : MonoBehaviour
             {
                 isBeatBySkill = false;
                 isCritical = false;                                                                         // Reset isCritical
-                float minDamage = 100 * ExperieneManager.instance.increaseDamagePercent;                    // Set min Damage and multiply with DamgePercent
-                float maxDamage = 116 * ExperieneManager.instance.increaseDamagePercent;                    // Set max Damage and multiply with DamgePercent
+                float minDamage = 100 * ExperieneManager.instance.increaseDamagePercent;                    // Set min Damage and multiply with DamagePercent
+                float maxDamage = 116 * ExperieneManager.instance.increaseDamagePercent;                    // Set max Damage and multiply with DamagePercent
                 int Critical = Random.Range(1, GameManager.instance.critical + 1);                          // Random Critical 1 - 10 (normal rate = 10)
 
                 if (Critical == GameManager.instance.critical)                                              // Critical when Random Number 10
                 {
                     isCritical = true;
-                    minDamage = 120 * ExperieneManager.instance.increaseDamagePercent;                      // Set min Critical Damage and multiply with DamgePercent
-                    maxDamage = 136 * ExperieneManager.instance.increaseDamagePercent;                      // Set max Critical Damage and multiply with DamgePercent
+                    minDamage = 120 * ExperieneManager.instance.increaseDamagePercent;                      // Set min Critical Damage and multiply with DamagePercent
+                    maxDamage = 136 * ExperieneManager.instance.increaseDamagePercent;                      // Set max Critical Damage and multiply with DamagePercent
                 }
 
                 damagedBoss = Random.Range(minDamage, maxDamage);                                           // Random Damage from min and max value

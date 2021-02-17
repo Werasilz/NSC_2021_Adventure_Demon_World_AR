@@ -24,6 +24,7 @@ ScriptsOnlyBuild:
     - PuzzleManager
     - PuzzleStack
     - RaycastPuzzleManager
+    - ShardStatsController
     - SkillController
     - SoundManager
     - VariableJoystick
@@ -1806,6 +1807,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2016}
     - Class: 114
+      Script: {instanceID: 2028}
+    - Class: 114
       Script: {instanceID: 2312}
     - Class: 114
       Script: {instanceID: 2326}
@@ -1837,6 +1840,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4446}
     - Class: 114
       Script: {instanceID: 4522}
+    - Class: 114
+      Script: {instanceID: 18076}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2356,7 +2361,7 @@ ScriptsOnlyBuild:
     className: SoundManager
   - hash:
       serializedVersion: 2
-      Hash: 85beb1abb81e90ad86e5ddcbd39d3755
+      Hash: 17db46dcfa4723c95432926afcad1ff9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelSelectManager
@@ -2756,6 +2761,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ComicPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 76a1397247aa144ea51ffd49a12d260f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShardStatsController
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

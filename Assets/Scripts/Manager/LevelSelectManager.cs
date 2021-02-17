@@ -8,6 +8,12 @@ public class LevelSelectManager : MonoBehaviour
 {
     public static LevelSelectManager instance = null;
 
+    public bool statsSet1;
+    public bool statsSet2;
+    public bool statsSet3;
+    public bool statsSet4;
+    public bool statsSet5;
+
     public bool level1IsClear;
     public bool level2IsClear;
     public bool level3IsClear;
