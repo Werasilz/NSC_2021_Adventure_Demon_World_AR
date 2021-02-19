@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteRenderer;
     private SphereCollider enemyArea;
-    private SphereCollider enemyCollider;
+    public SphereCollider enemyCollider;
     private BoxCollider checkLeft;
     private BoxCollider checkRight;
     private Color spriteColor;
@@ -265,6 +265,7 @@ public class EnemyController : MonoBehaviour
         #region Player Walk into Enemy Area
         if (isIntoArea)
         {
+            Debug.Log("Test");
             if (!isDead && !isDown && !isKnockback && !isStun)                                              // Check not have any status
             {
                 if (isWarning == false)                                                                     // Spawn Warning Prefab

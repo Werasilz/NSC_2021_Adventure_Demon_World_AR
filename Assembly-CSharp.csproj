@@ -54,6 +54,7 @@
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
      <Compile Include="Assets\UnityPackages\ThaiFontAdjuster\ThaiFontAdjuster.cs" />
      <Compile Include="Assets\Scripts\Controller\SkillController.cs" />
+     <Compile Include="Assets\Scripts\Controller\ShardStatsController.cs" />
      <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelSelectManager.cs" />
      <Compile Include="Assets\Scripts\Checker\CheckEnemyDirection.cs" />
@@ -73,7 +74,7 @@
      <Compile Include="Assets\Scripts\Popup\WarningPopup.cs" />
      <Compile Include="Assets\Scripts\Manager\ExperieneManager.cs" />
      <Compile Include="Assets\Scripts\ComicPlayer.cs" />
-     <Compile Include="Assets\Scripts\Controller\ShardStatsController.cs" />
+     <Compile Include="Assets\Scripts\Controller\BulletController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

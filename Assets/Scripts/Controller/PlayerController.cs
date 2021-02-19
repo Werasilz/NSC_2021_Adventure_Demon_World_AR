@@ -43,6 +43,12 @@ public class PlayerController : MonoBehaviour
     private Button skill3Button;
     #endregion
 
+    #region Bullet System
+    public GameObject bulletPrefab;
+    public float bulletForce;
+    private Button bulletButton;
+    #endregion
+
     #region GameObject
     private GameObject checkEnemy;                                                                      // GameObject for Checking Enemy Direction, Left and Right
     private GameObject spawnSkillPoint;                                                                 // Spawn Point for Skill
@@ -98,6 +104,7 @@ public class PlayerController : MonoBehaviour
         skill1Button = GameObject.Find("Skill1Button").GetComponent<Button>();
         skill2Button = GameObject.Find("Skill2Button").GetComponent<Button>();
         skill3Button = GameObject.Find("Skill3Button").GetComponent<Button>();
+        bulletButton = GameObject.Find("BulletButton").GetComponent<Button>();
         #endregion
     }
 
@@ -190,6 +197,27 @@ public class PlayerController : MonoBehaviour
                 HitEffect();                                                                            // Spawn Hit Effect
                 SoundManager.instance.PlaySingle(attackSound);
             }
+        }
+    }
+
+    public void ShootBullet()
+    {
+        bulletButton.GetComponent<CoolDownController>().StartCoolDown();
+        bulletButton.GetComponent<CoolDownController>().coolDown -= 2;
+        GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Rigidbody bulletRB = cloneBullet.GetComponent<Rigidbody>();
+        Destroy(cloneBullet, 1f);
+
+        if (isFlip)
+        {
+            cloneBullet.transform.localScale = new Vector3(-1, 1, 1);
+            bulletRB.AddRelativeForce(Vector3.right * bulletForce);
+        }
+        else
+        {
+            cloneBullet.transform.localScale = new Vector3(1, 1, 1);
+            cloneBullet.transform.Rotate(Vector3.left);
+            bulletRB.AddRelativeForce(Vector3.left * bulletForce);
         }
     }
     #endregion
@@ -381,17 +409,17 @@ public class PlayerController : MonoBehaviour
     {
         if (isFlip)
         {
-            transform.localScale = new Vector3(-0.01f, 0.01f, 0.01f);                                   // Filp Scale Player
-            levelPlayerText.transform.localScale = new Vector3(-0.15f, 0.15f, 0.15f);                   // Set Scale LevelPlayerText to not Filp follow parent
-            checkEnemy.transform.GetChild(0).transform.localPosition = new Vector3(1f, 0, 0);           // Set Position to not Filp follow parent
-            checkEnemy.transform.GetChild(1).transform.localPosition = new Vector3(-1f, 0, 0);          // Set Position to not Filp follow parent
+            transform.localScale = new Vector3(-0.01f, 0.01f, 0.01f);                                   // Flip Scale Player
+            levelPlayerText.transform.localScale = new Vector3(-0.15f, 0.15f, 0.15f);                   // Set Scale LevelPlayerText to not Flip follow parent
+            checkEnemy.transform.GetChild(0).transform.localPosition = new Vector3(1f, 0, 0);           // Set Position to not Flip follow parent
+            checkEnemy.transform.GetChild(1).transform.localPosition = new Vector3(-1f, 0, 0);          // Set Position to not Flip follow parent
         }
         else if (!isFlip)
         {
-            transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);                                    // Filp Scale Player
-            levelPlayerText.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);                    // Set Scale LevelPlayerText to not Filp follow parent
-            checkEnemy.transform.GetChild(0).transform.localPosition = new Vector3(-1f, 0, 0);          // Set Position to not Filp follow parent
-            checkEnemy.transform.GetChild(1).transform.localPosition = new Vector3(1f, 0, 0);           // Set Position to not Filp follow parent
+            transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);                                    // Flip Scale Player
+            levelPlayerText.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);                    // Set Scale LevelPlayerText to not Flip follow parent
+            checkEnemy.transform.GetChild(0).transform.localPosition = new Vector3(-1f, 0, 0);          // Set Position to not Flip follow parent
+            checkEnemy.transform.GetChild(1).transform.localPosition = new Vector3(1f, 0, 0);           // Set Position to not Flip follow parent
         }
     }
 

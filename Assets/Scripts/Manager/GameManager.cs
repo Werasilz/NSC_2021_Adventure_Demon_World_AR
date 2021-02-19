@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         {
             if (PlaceMapScript.instance.isSetPosition)                                  // Set Text when press Set Position Button
             {
-                hpText.text = hpPlayer.ToString();
+                hpText.text = hpPlayer.ToString("0");
                 scoreText.text = score.ToString();
 
                 if (level == 1 || level == 2 || level == 3 || level == 4 || level == 5) // Set Text Quest only normal level
