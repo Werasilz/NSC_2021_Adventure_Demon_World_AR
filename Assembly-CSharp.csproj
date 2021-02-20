@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Manager\LevelSelectManager.cs" />
      <Compile Include="Assets\Scripts\Checker\CheckEnemyDirection.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Scripts\Controller\BulletController.cs" />
      <Compile Include="Assets\Scripts\Popup\DamagePopup.cs" />
      <Compile Include="Assets\Scripts\LookAtCamera.cs" />
      <Compile Include="Assets\Common\Scripts\EditableColliderTool.cs" />
@@ -74,7 +75,7 @@
      <Compile Include="Assets\Scripts\Popup\WarningPopup.cs" />
      <Compile Include="Assets\Scripts\Manager\ExperieneManager.cs" />
      <Compile Include="Assets\Scripts\ComicPlayer.cs" />
-     <Compile Include="Assets\Scripts\Controller\BulletController.cs" />
+     <Compile Include="Assets\Scripts\Controller\MagicController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

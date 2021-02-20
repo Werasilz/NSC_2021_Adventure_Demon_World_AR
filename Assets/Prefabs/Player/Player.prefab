@@ -61,7 +61,9 @@ MonoBehaviour:
   skill2Prefab: {fileID: 2259908555609545005, guid: 14966e47bfedb2542a480b594a8af33d, type: 3}
   skill3Prefab: {fileID: 1261917751370565826, guid: 03d8b667df860cd44ad4c0667c8a1145, type: 3}
   bulletPrefab: {fileID: 3353484641573609971, guid: 693b6e5bc4f474340b1444e24585e850, type: 3}
+  magicCircle: {fileID: 3289896361728949375, guid: dc8d60bb82c36644689bfc4027696ef0, type: 3}
   bulletForce: 5
+  canShoot: 0
   hitEffect: {fileID: 1375304456328152720, guid: d53c3fa41b86ced43bf8762bdf558097, type: 3}
   damagePopupPrefab: {fileID: 8972444508259152796, guid: 4bd19d0ffb09c9d4ea309f917efbbd45, type: 3}
   shardPopup: {fileID: 1757605769295534339, guid: 081b76d0032203f488c4b84eb216be76, type: 3}

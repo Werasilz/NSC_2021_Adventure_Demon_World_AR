@@ -45,8 +45,10 @@ public class PlayerController : MonoBehaviour
 
     #region Bullet System
     public GameObject bulletPrefab;
+    public GameObject magicCircle;
     public float bulletForce;
     private Button bulletButton;
+    public bool canShoot;
     #endregion
 
     #region GameObject
@@ -114,6 +116,7 @@ public class PlayerController : MonoBehaviour
         {
             AnimationPlayerWalkJoyStick();
             FlipSprite();
+            Shootout();
         }
     }
 
@@ -202,22 +205,33 @@ public class PlayerController : MonoBehaviour
 
     public void ShootBullet()
     {
-        bulletButton.GetComponent<CoolDownController>().StartCoolDown();
-        bulletButton.GetComponent<CoolDownController>().coolDown -= 2;
-        GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        Rigidbody bulletRB = cloneBullet.GetComponent<Rigidbody>();
-        Destroy(cloneBullet, 1f);
+        GameObject cloneMagic = Instantiate(magicCircle, transform.position, transform.rotation);
+        cloneMagic.transform.SetParent(gameObject.transform);
+    }
 
-        if (isFlip)
+    private void Shootout()
+    {
+        if (canShoot)
         {
-            cloneBullet.transform.localScale = new Vector3(-1, 1, 1);
-            bulletRB.AddRelativeForce(Vector3.right * bulletForce);
-        }
-        else
-        {
-            cloneBullet.transform.localScale = new Vector3(1, 1, 1);
-            cloneBullet.transform.Rotate(Vector3.left);
-            bulletRB.AddRelativeForce(Vector3.left * bulletForce);
+            bulletButton.GetComponent<CoolDownController>().StartCoolDown();
+            bulletButton.GetComponent<CoolDownController>().coolDown -= 2;
+            GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Rigidbody bulletRB = cloneBullet.GetComponent<Rigidbody>();
+            Destroy(cloneBullet, 1f);
+
+            if (isFlip)
+            {
+                cloneBullet.transform.localScale = new Vector3(-1, 1, 1);
+                bulletRB.AddRelativeForce(Vector3.right * bulletForce);
+            }
+            else
+            {
+                cloneBullet.transform.localScale = new Vector3(1, 1, 1);
+                cloneBullet.transform.Rotate(Vector3.left);
+                bulletRB.AddRelativeForce(Vector3.left * bulletForce);
+            }
+
+            canShoot = false;
         }
     }
     #endregion
