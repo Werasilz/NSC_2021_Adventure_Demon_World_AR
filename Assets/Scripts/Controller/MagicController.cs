@@ -16,6 +16,7 @@ public class MagicController : MonoBehaviour
     {
         disappearTime -= Time.deltaTime;
         transform.localScale += new Vector3(0.3f, 0.3f, 0.3f) * Time.deltaTime;
+        transform.Rotate(0, 5, 0);
 
         if (disappearTime < 0)
         {

@@ -205,6 +205,8 @@ public class PlayerController : MonoBehaviour
 
     public void ShootBullet()
     {
+        bulletButton.GetComponent<CoolDownController>().StartCoolDown();
+        bulletButton.GetComponent<CoolDownController>().coolDown -= 2;
         GameObject cloneMagic = Instantiate(magicCircle, transform.position, transform.rotation);
         cloneMagic.transform.SetParent(gameObject.transform);
     }
@@ -213,9 +215,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canShoot)
         {
-            bulletButton.GetComponent<CoolDownController>().StartCoolDown();
-            bulletButton.GetComponent<CoolDownController>().coolDown -= 2;
-            GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, bulletPrefab.transform.rotation);
             Rigidbody bulletRB = cloneBullet.GetComponent<Rigidbody>();
             Destroy(cloneBullet, 1f);
 

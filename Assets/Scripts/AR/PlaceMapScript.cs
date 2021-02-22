@@ -56,11 +56,13 @@ public class PlaceMapScript : MonoBehaviour
         gamePlay.SetActive(false);
         canvasAdmin = GameObject.Find("CanvasAdmin");
         canvasAdmin.SetActive(false);
+
+        DisablePlane();
     }
 
     private void Start()
     {
-        DisablePlane();
+
     }
 
     void Update()
