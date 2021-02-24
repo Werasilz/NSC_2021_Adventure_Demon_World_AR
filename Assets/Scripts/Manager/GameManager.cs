@@ -51,6 +51,15 @@ public class GameManager : MonoBehaviour
     private GameObject clearText;
     #endregion
 
+    #region Comic Boss Level
+    private GameObject comic1;
+    private GameObject comic2;
+    private GameObject comic3;
+    private GameObject comic4;
+    private GameObject comic5;
+    private GameObject comic6;
+    #endregion
+
     #region GameObject for Rotate to Camera
     private GameObject arCamera;
     private GameObject player;
@@ -95,6 +104,18 @@ public class GameManager : MonoBehaviour
             clearText = GameObject.Find("UserInterface").transform.GetChild(4).gameObject;
             questText1 = GameObject.Find("QuestText").GetComponent<TextMeshProUGUI>();
             questText2 = GameObject.Find("QuestText2").GetComponent<TextMeshProUGUI>();
+        }
+        else if (level == 6 || level == 7 || level == 8 || level == 9)
+        {
+            comic1 = GameObject.Find("ComicBoss").transform.GetChild(0).gameObject;
+            comic2 = GameObject.Find("ComicBoss").transform.GetChild(1).gameObject;
+            comic3 = GameObject.Find("ComicBoss").transform.GetChild(2).gameObject;
+            comic4 = GameObject.Find("ComicBoss").transform.GetChild(3).gameObject;
+        }
+        else if (level == 10)
+        {
+            comic6 = GameObject.Find("ComicBoss").transform.GetChild(5).gameObject;
+            comic5 = GameObject.Find("ComicBoss").transform.GetChild(4).gameObject;
         }
     }
 
@@ -199,6 +220,7 @@ public class GameManager : MonoBehaviour
     {
         completeTab.SetActive(true);
         gamePlay.transform.GetChild(1).gameObject.SetActive(false);
+        ShowComicBoss();
 
         if (level == 1)
         {
@@ -248,6 +270,31 @@ public class GameManager : MonoBehaviour
         if (level == 10)
         {
             LevelSelectManager.instance.level10IsClear = true;
+        }
+    }
+
+    void ShowComicBoss()
+    {
+        if (level == 6)
+        {
+            comic1.SetActive(true);
+        }
+        else if (level == 7)
+        {
+            comic2.SetActive(true);
+        }
+        else if (level == 8)
+        {
+            comic3.SetActive(true);
+        }
+        else if (level == 9)
+        {
+            comic4.SetActive(true);
+        }
+        else if (level == 10)
+        {
+            comic6.SetActive(true);
+            comic5.SetActive(true);
         }
     }
 

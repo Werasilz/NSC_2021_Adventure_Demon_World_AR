@@ -215,7 +215,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canShoot)
         {
-            GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, bulletPrefab.transform.rotation);
+            GameObject cloneBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             Rigidbody bulletRB = cloneBullet.GetComponent<Rigidbody>();
             Destroy(cloneBullet, 1f);
 
@@ -227,7 +227,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 cloneBullet.transform.localScale = new Vector3(1, 1, 1);
-                cloneBullet.transform.Rotate(Vector3.left);
                 bulletRB.AddRelativeForce(Vector3.left * bulletForce);
             }
 
