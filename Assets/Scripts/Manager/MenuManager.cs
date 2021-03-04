@@ -240,27 +240,27 @@ public class MenuManager : MonoBehaviour
 
     public void GotoLevel6()
     {
-        SceneManager.LoadScene("Level6");
+        SceneManager.LoadScene("Level1Boss");
     }
 
     public void GotoLevel7()
     {
-        SceneManager.LoadScene("Level7");
+        SceneManager.LoadScene("Level2Boss");
     }
 
     public void GotoLevel8()
     {
-        SceneManager.LoadScene("Level8");
+        SceneManager.LoadScene("Level3Boss");
     }
 
     public void GotoLevel9()
     {
-        SceneManager.LoadScene("Level9");
+        SceneManager.LoadScene("Level4Boss");
     }
 
     public void GotoLevel10()
     {
-        SceneManager.LoadScene("Level10");
+        SceneManager.LoadScene("Level5Boss");
     }
     #endregion
 
